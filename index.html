@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIX to PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #4CAF50;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .container:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        input[type="file"], input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        input[type="file"]:focus, input[type="text"]:focus, textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        textarea {
+            height: 200px;
+            resize: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .button-space {
+            margin-bottom: 10px; /* Adds a bit of space between the buttons */
+        }
+        .adsense {
+            margin-top: 20px;
+        }
+        .adsense ins {
+            display: block;
+            margin: 0 auto;
+        }
+        .privacy-link {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .data-highlight {
+            background-color: #e7f7e7;
+            border-left: 4px solid #4CAF50;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: left;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .radio-group label {
+            font-size: 16px;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8212879270080474" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>PIX to PDF</h1>
+        <input type="file" id="fileInput" accept="image/*" multiple>
+        <input type="text" id="fileNameInput" placeholder="Enter custom file name (optional)">
+        <textarea id="notes" placeholder="Please enter notes below (leave blank if no notes are needed)"></textarea>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="notesPosition" value="first" checked>
+                First Page
+            </label>
+            <label>
+                <input type="radio" name="notesPosition" value="last">
+                Last Page
+            </label>
+        </div>
+        <button id="createPdfButton" class="button-space">Download PDF</button>
+        <button id="viewPdfButton">View PDF</button> <!-- New button added -->
+        <div class="adsense">
+            <!-- Google AdSense Placeholder -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8212879270080474"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="data-highlight">
+            <p><strong>Data Collection:</strong> We do not collect, store, or process any personal data from users. All data, including images and notes, is handled locally on your device. This means:</p>
+            <ul>
+                <li>No images are uploaded to a server.</li>
+                <li>No personal data is collected, stored, or shared by our web app.</li>
+            </ul>
+        </div>
+        <div class="privacy-link">
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
