@@ -16,6 +16,7 @@
             min-height: 100vh;
             background-color: #f4f4f4;
             color: #333;
+            overflow: hidden; /* Prevent resizing */
         }
         h1 {
             margin-bottom: 10px;
@@ -102,6 +103,11 @@
         .radio-group label {
             font-size: 16px;
         }
+        .tagline {
+            color: black;
+            font-size: 18px;
+            margin-top: 10px;
+        }
         @media (max-width: 600px) {
             h1 {
                 font-size: 24px;
@@ -117,6 +123,7 @@
     <div class="container">
         <h1>PIX to PDF</h1>
         <h2>The Best and Easiest Method to Share Multiple Images</h2>
+        <p class="tagline">The ultimate tool for quick, secure, and effortless image-to-PDF conversion.</p>
         <input type="file" id="fileInput" accept="image/*" multiple>
         <input type="text" id="fileNameInput" placeholder="Enter custom file name (optional)">
         <label>Please enter notes below (leave blank if no notes are needed)</label>
