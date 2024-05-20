@@ -18,16 +18,10 @@
             color: #333;
         }
         h1 {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             font-size: 28px;
             color: #4CAF50;
             text-align: center;
-        }
-        .tagline {
-            font-size: 16px;
-            color: black;
-            text-align: center;
-            margin-bottom: 20px;
         }
         .container {
             background: white;
@@ -50,7 +44,6 @@
             border-radius: 4px;
             box-sizing: border-box;
             transition: border-color 0.3s ease;
-            font-size: 16px;
         }
         input[type="file"]:focus, input[type="text"]:focus, textarea:focus {
             border-color: #4CAF50;
@@ -59,7 +52,6 @@
         textarea {
             height: 200px;
             resize: none;
-            font-size: 16px;
         }
         button {
             width: 100%;
@@ -113,16 +105,12 @@
                 padding: 20px;
             }
         }
-        input[type="text"], textarea {
-            font-size: 16px; /* Prevent zooming on iOS */
-        }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8212879270080474" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <h1>PIX to PDF</h1>
-        <div class="tagline">The best and easiest method to share multiple images</div> <!-- Added tagline -->
         <input type="file" id="fileInput" accept="image/*" multiple>
         <input type="text" id="fileNameInput" placeholder="Enter custom file name (optional)">
         <textarea id="notes" placeholder="Please enter notes below (leave blank if no notes are needed)"></textarea>
@@ -166,6 +154,6 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js?v=1.0.1"></script>
 </body>
 </html>
